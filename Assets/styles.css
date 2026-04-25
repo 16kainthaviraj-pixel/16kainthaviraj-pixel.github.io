@@ -14,3 +14,23 @@ body {
     justify-content: center;
     height: 100vh;
 }
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3b82f6; /* blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
