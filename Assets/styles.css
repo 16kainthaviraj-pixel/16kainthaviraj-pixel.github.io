@@ -34,3 +34,7 @@ body {
 .btn:active {
     transform: scale(0.97);
 }
+
+.SchoolWorkButtons {
+    margin: 10px;
+}
