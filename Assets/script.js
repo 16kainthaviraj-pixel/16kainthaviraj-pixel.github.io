@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
   const overlay = document.getElementById("overlay");
-  const links = document.querySelectorAll(".nav-links a");
+
+  if (!hamburger || !navLinks || !overlay) {
+    console.log("Navbar elements missing!");
+    return;
+  }
 
   function toggleMenu() {
     hamburger.classList.toggle("active");
@@ -33,12 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", toggleMenu);
   overlay.addEventListener("click", toggleMenu);
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("show");
-      overlay.classList.remove("show");
-    });
-  });
 });
