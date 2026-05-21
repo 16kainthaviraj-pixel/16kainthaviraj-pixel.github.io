@@ -19,29 +19,26 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
-const overlay = document.getElementById("overlay");
-const links = document.querySelectorAll(".nav-links a");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
+  const links = document.querySelectorAll(".nav-links a");
 
-// open/close menu
-function toggleMenu() {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("show");
-  overlay.classList.toggle("show");
-}
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+    overlay.classList.toggle("show");
+  }
 
-// click hamburger
-hamburger.addEventListener("click", toggleMenu);
+  hamburger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
 
-// click overlay closes menu
-overlay.addEventListener("click", toggleMenu);
-
-// click link auto-closes menu
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("show");
-    overlay.classList.remove("show");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("show");
+      overlay.classList.remove("show");
+    });
   });
 });
