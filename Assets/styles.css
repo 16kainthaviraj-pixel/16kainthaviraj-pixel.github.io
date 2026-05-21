@@ -187,32 +187,41 @@ h1, h2, h4 {
   pointer-events: all;
 }
 
-/* MOBILE MENU */
 @media (max-width: 768px) {
 
   .hamburger {
     display: block;
   }
 
-  .nav-links {
+@media (max-width: 768px) {
+
+.nav-links {
     position: fixed;
     top: 0;
-    right: -280px;
+    right: -100%;
     height: 100vh;
     width: 260px;
+
+    display: flex;
     flex-direction: column;
     gap: 15px;
+
     padding: 80px 20px;
+
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(15px);
+
     box-shadow: -10px 0 30px rgba(0,0,0,0.2);
-    transition: 0.35s ease;
+
+    transition: right 0.35s ease;
+
     z-index: 1000;
   }
 
   .nav-links.show {
     right: 0;
   }
+}
 
   body.dark-mode .nav-links {
     background: rgba(17, 25, 40, 0.95);
