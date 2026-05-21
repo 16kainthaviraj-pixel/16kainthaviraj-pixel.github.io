@@ -142,3 +142,46 @@ body.dark-mode .nav-links a:hover {
   transform: scale(1.15);
   filter: drop-shadow(0 0 6px rgba(30,136,229,0.35));
 }
+
+h1, h2, h4 {
+  font-family: 'Orbitron'; 
+  text-align: center;                      
+  margin: 20px 0;                          
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #157fc1;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+    padding: 15px;
+    border-radius: 20px;
+    gap: 10px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  body.dark-mode .nav-links {
+    background: rgba(17, 25, 40, 0.95);
+  }
+}
