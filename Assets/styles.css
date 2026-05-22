@@ -192,9 +192,7 @@ h1, h2, h4 {
     display: block;
   }
 
-@media (max-width: 768px) {
-
-.nav-links {
+  .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
@@ -216,6 +214,15 @@ h1, h2, h4 {
 
     z-index: 1000;
   }
+
+  .nav-links.show {
+    right: 0;
+  }
+
+  body.dark-mode .nav-links {
+    background: rgba(17, 25, 40, 0.95);
+  }
+}
 
   .nav-links.show {
     right: 0;
@@ -260,7 +267,7 @@ body.dark-mode .hamburger span {
   }
 
   .logo span {
-    display: none; /* hides "Avi.K School Work" */
+    display: none;
   }
 
   #theme-toggle {
