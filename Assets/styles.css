@@ -149,7 +149,6 @@ h1, h2, h4 {
   margin: 20px 0;                          
 }
 
-/* HAMBURGER BUTTON */
 .hamburger {
   display: none;
   width: 45px;
@@ -193,7 +192,6 @@ h1, h2, h4 {
   pointer-events: all;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
 
   .navbar {
@@ -276,7 +274,6 @@ h1, h2, h4 {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* DARK MODE */
 body.dark-mode .overlay {
   background: rgba(0,0,0,0.6);
 }
