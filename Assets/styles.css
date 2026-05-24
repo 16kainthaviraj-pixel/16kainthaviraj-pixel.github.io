@@ -176,7 +176,6 @@ h1, h2, h4 {
   transform-origin: center;
 }
 
-/* OVERLAY */
 .overlay {
   position: fixed;
   inset: 0;
@@ -261,7 +260,6 @@ h1, h2, h4 {
   }
 }
 
-/* HAMBURGER → X */
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
