@@ -64,7 +64,7 @@ body {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
 }
 
-h1, h2, h4 {
+h1, h2, h3, h4 {
   font-family: 'Saira';
   text-align: center;                      
   margin: 20px 0;                          
@@ -106,3 +106,45 @@ color: #000;
   height: auto;
   border-radius: 6%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+  .img3card {
+    display: flex;
+    gap: 20px;            
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    flex: 1;
+    text-align: center;
+    text-decoration: none; 
+    color: #333;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .card:hover {
+    transform: scale(1.1); 
+    z-index: 10;          
+  }
+
+  .card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: underline; 
+    font-family: 'Saira';
+
+  }
+
+ 

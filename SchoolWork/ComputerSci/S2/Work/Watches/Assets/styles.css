@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, "Cormorant Garamond"
+}
+
+.HeaderPage {
+  background-color: #999B9B;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  font-family: 'Cormorant Garamond'
+}
+
+.HeaderLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.HeaderLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px; 
+}
+
+.HeaderLinks a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.HeaderLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease;
+}
+
+.logo img {
+  height: 1em;       
+  width: auto;
+  vertical-align: middle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 62px; 
+}
+
+.logo img {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+.HeaderLinks a:hover::after {
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Saira';
+  text-align: center;                      
+  margin: 20px 0;                          
+}
+
+.image-container {
+  display: flex;
+  gap: 10px; 
+}
+
+.image-container img {
+  width: 20%; 
+  height: 400px; 
+}
