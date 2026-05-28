@@ -1,4 +1,4 @@
-name: Deploy to IONOS
+name: Deploy to IONOS (SFTP)
 
 on:
   push:
@@ -9,14 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/www/WebDev/SchoolWork/SchoolWork/
-          passive: true
+          port: 22
+          source: "."
+          target: "/home/www/WebDev/SchoolWork/SchoolWork/"
